@@ -2,8 +2,8 @@ pipeline {
     agent { label 'Jenkins-Agent' }
 
     tools {
-        jdk 'Java21'         // Make sure this is configured in Jenkins Global Tool Configuration
-        maven 'maven'        // Use the correct name as configured in Jenkins
+        jdk 'Java17'         
+        maven 'maven'        
     }
 
     environment {
