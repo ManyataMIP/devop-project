@@ -10,7 +10,7 @@ env:
   ECR_REPOSITORY: new-dev
   ECS_SERVICE: new-tdf-service                     # name of the service
   ECS_CLUSTER: new-cluster                   # name of the cluster
-  ECS_TASK_DEFINITION: .aws/task-definition.json  # path of the JSON task definition
+  ECS_TASK_DEFINITION: .github/workflows/new-tdf-revision1.json  # path of the JSON task definition
   CONTAINER_NAME: "app"    
 
 jobs:
