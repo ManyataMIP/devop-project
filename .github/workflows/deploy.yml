@@ -8,7 +8,7 @@ on:
 env:
   AWS_REGION: us-east-1
   ECR_REPOSITORY: new-dev
-  ECS_SERVICE: new-tdf-service                     # name of the service
+  ECS_SERVICE: tdf-new-s435                     # name of the service
   ECS_CLUSTER: new-cluster                   # name of the cluster
   ECS_TASK_DEFINITION: .github/workflows/new-tdf-revision1.json  # path of the JSON task definition
   CONTAINER_NAME: "app"    
