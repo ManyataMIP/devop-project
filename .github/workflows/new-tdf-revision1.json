@@ -1,87 +1,48 @@
 {
-    "compatibilities": [
-        "EC2",
-        "FARGATE",
-        "MANAGED_INSTANCES"
-    ],
-    "containerDefinitions": [
+  "compatibilities": [
+    "EC2",
+    "FARGATE",
+    "MANAGED_INSTANCES"
+  ],
+  "containerDefinitions": [
+    {
+      "cpu": 0,
+      "environment": [],
+      "environmentFiles": [],
+      "essential": true,
+      "image": "272116696308.dkr.ecr.us-east-1.amazonaws.com/new-dev:80296312cbfabf272e2e9e9f90cafae8af33b16c",
+      "logConfiguration": {
+        "logDriver": "awslogs",
+        "options": {
+          "awslogs-group": "/ecs/new-tdf",
+          "awslogs-create-group": "true",
+          "awslogs-region": "us-east-1",
+          "awslogs-stream-prefix": "ecs"
+        },
+        "secretOptions": []
+      },
+      "mountPoints": [],
+      "name": "app",
+      "portMappings": [
         {
-            "cpu": 0,
-            "environment": [],
-            "environmentFiles": [],
-            "essential": true,
-            "image": "272116696308.dkr.ecr.us-east-1.amazonaws.com/new-dev:80296312cbfabf272e2e9e9f90cafae8af33b16c",
-            "logConfiguration": {
-                "logDriver": "awslogs",
-                "options": {
-                    "awslogs-group": "/ecs/new-tdf",
-                    "awslogs-create-group": "true",
-                    "awslogs-region": "us-east-1",
-                    "awslogs-stream-prefix": "ecs"
-                },
-                "secretOptions": []
-            },
-            "mountPoints": [],
-            "name": "app",
-            "portMappings": [
-                {
-                    "appProtocol": "http",
-                    "containerPort": 80,
-                    "hostPort": 80,
-                    "name": "app-80-tcp",
-                    "protocol": "tcp"
-                }
-            ],
-            "systemControls": [],
-            "ulimits": [],
-            "volumesFrom": []
+          "appProtocol": "http",
+          "containerPort": 80,
+          "hostPort": 80,
+          "name": "app-80-tcp",
+          "protocol": "tcp"
         }
-    ],
-    "cpu": "1024",
-    "enableFaultInjection": false,
-    "executionRoleArn": "arn:aws:iam::272116696308:role/ecsTaskExecutionRole",
-    "family": "new-tdf",
-    "memory": "3072",
-    "networkMode": "awsvpc",
-    "placementConstraints": [],
-    "registeredAt": "2025-10-27T07:17:50.999Z",
-    "registeredBy": "arn:aws:sts::272116696308:federated-user/manyata.ghadei@ltimindtree.com",
-    "requiresAttributes": [
-        {
-            "name": "com.amazonaws.ecs.capability.logging-driver.awslogs"
-        },
-        {
-            "name": "ecs.capability.execution-role-awslogs"
-        },
-        {
-            "name": "com.amazonaws.ecs.capability.ecr-auth"
-        },
-        {
-            "name": "com.amazonaws.ecs.capability.docker-remote-api.1.19"
-        },
-        {
-            "name": "ecs.capability.execution-role-ecr-pull"
-        },
-        {
-            "name": "com.amazonaws.ecs.capability.docker-remote-api.1.18"
-        },
-        {
-            "name": "ecs.capability.task-eni"
-        },
-        {
-            "name": "com.amazonaws.ecs.capability.docker-remote-api.1.29"
-        }
-    ],
-    "requiresCompatibilities": [
-        "FARGATE"
-    ],
-    "revision": 1,
-    "runtimePlatform": {
-        "cpuArchitecture": "X86_64",
-        "operatingSystemFamily": "LINUX"
-    },
-    "status": "ACTIVE",
-    "taskDefinitionArn": "arn:aws:ecs:us-east-1:272116696308:task-definition/new-tdf:1",
-    "volumes": [],
-    "tags": []
+      ],
+      "systemControls": [],
+      "ulimits": [],
+      "volumesFrom": []
+    }
+  ],
+  "cpu": "1024",
+  "executionRoleArn": "arn:aws:iam::272116696308:role/ecsTaskExecutionRole",
+  "family": "new-tdf",
+  "memory": "3072",
+  "networkMode": "awsvpc",
+  "requiresCompatibilities": [
+    "FARGATE"
+  ]
 }
